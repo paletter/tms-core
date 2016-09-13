@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   	<modelVersion>4.0.0</modelVersion>
-  	<groupId>com.palette.tms</groupId>
+  	<groupId>com.palette</groupId>
   	<artifactId>tms-core</artifactId>
-  	<version>1.0-SNAPSHOT</version>
+  	<version>0.0.1-SNAPSHOT</version>
   	<packaging>jar</packaging>
   	
 	<repositories>
@@ -41,12 +41,12 @@
 	<distributionManagement>
 		<repository>
 			<id>palette-releases</id>
-			<name>Palette Releases</name>
+			<name>palette-releases</name>
 			<url>http://139.196.219.132:8081/repository/palette-release/</url>
 		</repository>
 		<snapshotRepository>
 			<id>palette-snapshots</id>
-			<name>Palette Snapshots</name>
+			<name>palette-snapshots</name>
 			<url>http://139.196.219.132:8081/repository/palette-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
@@ -194,4 +194,5 @@
 			</plugin>
 		</plugins>
 	</build>
+>>>>>>> d48bccf0ab195f360b41deed0fe50a86354d9cb4
 </project>
