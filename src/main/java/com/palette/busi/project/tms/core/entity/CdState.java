@@ -20,6 +20,7 @@ public class CdState extends BasePo {
     private String stateEnglishName;
     private String countryCode;
     private String memo;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -82,6 +83,14 @@ public class CdState extends BasePo {
         
     public void setMemo(String memo) {
         this.memo = memo;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

@@ -21,6 +21,7 @@ public class TmSectorHistory extends BasePo {
     private String actionPlace;
     private Date actionDateTime;
     private String actionUserName;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -89,6 +90,14 @@ public class TmSectorHistory extends BasePo {
         
     public void setActionUserName(String actionUserName) {
         this.actionUserName = actionUserName;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

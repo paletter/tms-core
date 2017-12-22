@@ -24,6 +24,7 @@ public class TmUnit extends BasePo {
     private String mawbCode;
     private String sectorCode;
     private Integer tmSectorId;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -116,6 +117,14 @@ public class TmUnit extends BasePo {
         
     public void setTmSectorId(Integer tmSectorId) {
         this.tmSectorId = tmSectorId;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

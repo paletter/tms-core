@@ -30,6 +30,9 @@ public class CdUserRoleSqlProvider extends BaseSqlProvider {
         if (record.getCdRoleId() != null) {
             SET("CD_ROLE_ID = #{cdRoleId}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -71,6 +74,9 @@ public class CdUserRoleSqlProvider extends BaseSqlProvider {
         }
         if (record.getCdRoleId() != null) {
             stringBuffer.append(" AND CD_ROLE_ID = #{cdRoleId}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

@@ -20,6 +20,7 @@ public class TmPiecesHistory extends BasePo {
     private String memo;
     private String actionUserName;
     private Date actionDateTime;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -80,6 +81,14 @@ public class TmPiecesHistory extends BasePo {
         
     public void setActionDateTime(Date actionDateTime) {
         this.actionDateTime = actionDateTime;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

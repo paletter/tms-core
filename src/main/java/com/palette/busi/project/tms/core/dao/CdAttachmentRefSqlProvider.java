@@ -33,6 +33,9 @@ public class CdAttachmentRefSqlProvider extends BaseSqlProvider {
         if (record.getRelationCode() != null) {
             SET("RELATION_CODE = #{relationCode}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -77,6 +80,9 @@ public class CdAttachmentRefSqlProvider extends BaseSqlProvider {
         }
         if (record.getRelationCode() != null) {
             stringBuffer.append(" AND RELATION_CODE = #{relationCode}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

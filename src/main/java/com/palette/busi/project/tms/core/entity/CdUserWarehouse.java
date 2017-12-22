@@ -16,6 +16,7 @@ public class CdUserWarehouse extends BasePo {
     private Integer cdUserWarehouseId;
     private Integer cdUserId;
     private Integer cdWarehouseId;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -46,6 +47,14 @@ public class CdUserWarehouse extends BasePo {
         
     public void setCdWarehouseId(Integer cdWarehouseId) {
         this.cdWarehouseId = cdWarehouseId;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

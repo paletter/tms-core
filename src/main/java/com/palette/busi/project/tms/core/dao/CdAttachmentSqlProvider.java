@@ -39,6 +39,9 @@ public class CdAttachmentSqlProvider extends BaseSqlProvider {
         if (record.getAttachmentComment() != null) {
             SET("ATTACHMENT_COMMENT = #{attachmentComment}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -89,6 +92,9 @@ public class CdAttachmentSqlProvider extends BaseSqlProvider {
         }
         if (record.getAttachmentComment() != null) {
             stringBuffer.append(" AND ATTACHMENT_COMMENT = #{attachmentComment}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

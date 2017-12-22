@@ -69,6 +69,8 @@ import com.palette.busi.project.tms.core.dao.TmPiecesCurrentDao;
 import com.palette.busi.project.tms.core.entity.TmPiecesCurrent;
 import com.palette.busi.project.tms.core.dao.TmPiecesHistoryDao;
 import com.palette.busi.project.tms.core.entity.TmPiecesHistory;
+import com.palette.busi.project.tms.core.dao.TmPiecesItemDao;
+import com.palette.busi.project.tms.core.entity.TmPiecesItem;
 import com.palette.busi.project.tms.core.dao.TmPiecesRefDao;
 import com.palette.busi.project.tms.core.entity.TmPiecesRef;
 import com.palette.busi.project.tms.core.dao.TmSectorDao;
@@ -135,6 +137,7 @@ public class EntityGeneralQuerier {
 	@Autowired private TmPiecesActionDao TmPiecesActionDao;
 	@Autowired private TmPiecesCurrentDao TmPiecesCurrentDao;
 	@Autowired private TmPiecesHistoryDao TmPiecesHistoryDao;
+	@Autowired private TmPiecesItemDao TmPiecesItemDao;
 	@Autowired private TmPiecesRefDao TmPiecesRefDao;
 	@Autowired private TmSectorDao TmSectorDao;
 	@Autowired private TmSectorActionDao TmSectorActionDao;
@@ -336,6 +339,12 @@ public class EntityGeneralQuerier {
 	public List<TmPiecesHistory> selectTmPiecesHistoryAllByRecord(TmPiecesHistory param) {return TmPiecesHistoryDao.selectAllByRecord(param);};
 	public TmPiecesHistory selectTmPiecesHistoryOneByRecord(TmPiecesHistory param) {return TmPiecesHistoryDao.selectOneByRecord(param);};
 	public PageInfo selectTmPiecesHistoryPageByRecord(TmPiecesHistory param) {return TmPiecesHistoryDao.selectPageByRecord(param);};
+	
+	public TmPiecesItem selectTmPiecesItemById(Integer id) {return TmPiecesItemDao.selectTmPiecesItemById(id);}
+	public List<TmPiecesItem> selectTmPiecesItemAll() {return TmPiecesItemDao.selectAllTmPiecesItem();};
+	public List<TmPiecesItem> selectTmPiecesItemAllByRecord(TmPiecesItem param) {return TmPiecesItemDao.selectAllByRecord(param);};
+	public TmPiecesItem selectTmPiecesItemOneByRecord(TmPiecesItem param) {return TmPiecesItemDao.selectOneByRecord(param);};
+	public PageInfo selectTmPiecesItemPageByRecord(TmPiecesItem param) {return TmPiecesItemDao.selectPageByRecord(param);};
 	
 	public TmPiecesRef selectTmPiecesRefById(Integer id) {return TmPiecesRefDao.selectTmPiecesRefById(id);}
 	public List<TmPiecesRef> selectTmPiecesRefAll() {return TmPiecesRefDao.selectAllTmPiecesRef();};

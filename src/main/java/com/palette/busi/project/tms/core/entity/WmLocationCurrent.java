@@ -22,6 +22,7 @@ public class WmLocationCurrent extends BasePo {
     private Integer tmConsignmentId;
     private String consignmentNo;
     private String memo;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -100,6 +101,14 @@ public class WmLocationCurrent extends BasePo {
         
     public void setMemo(String memo) {
         this.memo = memo;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

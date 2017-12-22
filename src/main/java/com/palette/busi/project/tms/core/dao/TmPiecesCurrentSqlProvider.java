@@ -42,6 +42,9 @@ public class TmPiecesCurrentSqlProvider extends BaseSqlProvider {
         if (record.getActionDateTime() != null) {
             SET("ACTION_DATE_TIME = #{actionDateTime}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -89,6 +92,9 @@ public class TmPiecesCurrentSqlProvider extends BaseSqlProvider {
         }
         if (record.getActionDateTime() != null) {
             stringBuffer.append(" AND ACTION_DATE_TIME = #{actionDateTime}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

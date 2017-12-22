@@ -18,13 +18,13 @@ import com.palette.busi.project.tms.core.base.BaseMybatisMapper;
 public interface TmPiecesCurrentIntf extends BaseMybatisMapper {
 
 
-	@Select("SELECT  TM_PIECES_CURRENT_ID  AS tmPiecesCurrentId, TM_PIECES_ID  AS tmPiecesId, PIECES_NO  AS piecesNo, ACTION_CODE  AS actionCode, MEMO  AS memo, ACTION_USER_NAME  AS actionUserName, ACTION_DATE_TIME  AS actionDateTime, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM tm_pieces_current WHERE tm_pieces_current_id=#{tmPiecesCurrentId}")
+	@Select("SELECT  TM_PIECES_CURRENT_ID  AS tmPiecesCurrentId, TM_PIECES_ID  AS tmPiecesId, PIECES_NO  AS piecesNo, ACTION_CODE  AS actionCode, MEMO  AS memo, ACTION_USER_NAME  AS actionUserName, ACTION_DATE_TIME  AS actionDateTime, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM tm_pieces_current WHERE tm_pieces_current_id=#{tmPiecesCurrentId}")
 	public TmPiecesCurrent selectTmPiecesCurrentById(@Param("tmPiecesCurrentId") int tmPiecesCurrentId);
 	
-	@Select("SELECT  TM_PIECES_CURRENT_ID  AS tmPiecesCurrentId, TM_PIECES_ID  AS tmPiecesId, PIECES_NO  AS piecesNo, ACTION_CODE  AS actionCode, MEMO  AS memo, ACTION_USER_NAME  AS actionUserName, ACTION_DATE_TIME  AS actionDateTime, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM tm_pieces_current")
+	@Select("SELECT  TM_PIECES_CURRENT_ID  AS tmPiecesCurrentId, TM_PIECES_ID  AS tmPiecesId, PIECES_NO  AS piecesNo, ACTION_CODE  AS actionCode, MEMO  AS memo, ACTION_USER_NAME  AS actionUserName, ACTION_DATE_TIME  AS actionDateTime, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM tm_pieces_current")
 	public List<TmPiecesCurrent> selectAllTmPiecesCurrent();
 	
-	@Insert("insert into tm_pieces_current ( TM_PIECES_CURRENT_ID, TM_PIECES_ID, PIECES_NO, ACTION_CODE, MEMO, ACTION_USER_NAME, ACTION_DATE_TIME, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, UPDATE_USER_CODE, UPDATE_DATE_TIME ) values (#{tmPiecesCurrentId},#{tmPiecesId},#{piecesNo},#{actionCode},#{memo},#{actionUserName},#{actionDateTime},#{recordVersion},#{createUserCode},#{createDateTime},#{updateUserCode},#{updateDateTime})")
+	@Insert("insert into tm_pieces_current ( TM_PIECES_CURRENT_ID, TM_PIECES_ID, PIECES_NO, ACTION_CODE, MEMO, ACTION_USER_NAME, ACTION_DATE_TIME, COMPANY_CODE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, UPDATE_USER_CODE, UPDATE_DATE_TIME ) values (#{tmPiecesCurrentId},#{tmPiecesId},#{piecesNo},#{actionCode},#{memo},#{actionUserName},#{actionDateTime},#{companyCode},#{recordVersion},#{createUserCode},#{createDateTime},#{updateUserCode},#{updateDateTime})")
 	public int insertTmPiecesCurrent(TmPiecesCurrent tmPiecesCurrent);
 
 	@UpdateProvider(type=TmPiecesCurrentSqlProvider.class, method="update")

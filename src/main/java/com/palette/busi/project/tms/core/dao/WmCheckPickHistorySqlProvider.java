@@ -45,6 +45,9 @@ public class WmCheckPickHistorySqlProvider extends BaseSqlProvider {
         if (record.getCountryCode() != null) {
             SET("COUNTRY_CODE = #{countryCode}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -101,6 +104,9 @@ public class WmCheckPickHistorySqlProvider extends BaseSqlProvider {
         }
         if (record.getCountryCode() != null) {
             stringBuffer.append(" AND COUNTRY_CODE = #{countryCode}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

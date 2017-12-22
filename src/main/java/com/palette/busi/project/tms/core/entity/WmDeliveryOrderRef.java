@@ -19,6 +19,7 @@ public class WmDeliveryOrderRef extends BasePo {
     private String refType;
     private Integer refId;
     private String refCode;
+    private String companyCode;
     private Integer recordVersion;
     private Date createDateTime;
     private String createUserCode;
@@ -71,6 +72,14 @@ public class WmDeliveryOrderRef extends BasePo {
         
     public void setRefCode(String refCode) {
         this.refCode = refCode;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

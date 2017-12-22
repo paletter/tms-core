@@ -39,6 +39,9 @@ public class WmDeliveryOrderRefSqlProvider extends BaseSqlProvider {
         if (record.getRefCode() != null) {
             SET("REF_CODE = #{refCode}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -83,6 +86,9 @@ public class WmDeliveryOrderRefSqlProvider extends BaseSqlProvider {
         }
         if (record.getRefCode() != null) {
             stringBuffer.append(" AND REF_CODE = #{refCode}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

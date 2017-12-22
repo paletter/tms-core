@@ -102,6 +102,30 @@ public class TmPiecesSqlProvider extends BaseSqlProvider {
         if (record.getCompanyCode() != null) {
             SET("COMPANY_CODE = #{companyCode}");
         }
+        if (record.getConsigneeName() != null) {
+            SET("CONSIGNEE_NAME = #{consigneeName}");
+        }
+        if (record.getConsigneeStateCode() != null) {
+            SET("CONSIGNEE_STATE_CODE = #{consigneeStateCode}");
+        }
+        if (record.getConsigneeCityCode() != null) {
+            SET("CONSIGNEE_CITY_CODE = #{consigneeCityCode}");
+        }
+        if (record.getConsigneeStreet() != null) {
+            SET("CONSIGNEE_STREET = #{consigneeStreet}");
+        }
+        if (record.getConsigneePostCode() != null) {
+            SET("CONSIGNEE_POST_CODE = #{consigneePostCode}");
+        }
+        if (record.getConsigneeMobileNo() != null) {
+            SET("CONSIGNEE_MOBILE_NO = #{consigneeMobileNo}");
+        }
+        if (record.getConsigneeChineseFullAddress() != null) {
+            SET("CONSIGNEE_CHINESE_FULL_ADDRESS = #{consigneeChineseFullAddress}");
+        }
+        if (record.getTotalGoodsDescription() != null) {
+            SET("TOTAL_GOODS_DESCRIPTION = #{totalGoodsDescription}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -209,6 +233,30 @@ public class TmPiecesSqlProvider extends BaseSqlProvider {
         }
         if (record.getCompanyCode() != null) {
             stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
+        }
+        if (record.getConsigneeName() != null) {
+            stringBuffer.append(" AND CONSIGNEE_NAME = #{consigneeName}");
+        }
+        if (record.getConsigneeStateCode() != null) {
+            stringBuffer.append(" AND CONSIGNEE_STATE_CODE = #{consigneeStateCode}");
+        }
+        if (record.getConsigneeCityCode() != null) {
+            stringBuffer.append(" AND CONSIGNEE_CITY_CODE = #{consigneeCityCode}");
+        }
+        if (record.getConsigneeStreet() != null) {
+            stringBuffer.append(" AND CONSIGNEE_STREET = #{consigneeStreet}");
+        }
+        if (record.getConsigneePostCode() != null) {
+            stringBuffer.append(" AND CONSIGNEE_POST_CODE = #{consigneePostCode}");
+        }
+        if (record.getConsigneeMobileNo() != null) {
+            stringBuffer.append(" AND CONSIGNEE_MOBILE_NO = #{consigneeMobileNo}");
+        }
+        if (record.getConsigneeChineseFullAddress() != null) {
+            stringBuffer.append(" AND CONSIGNEE_CHINESE_FULL_ADDRESS = #{consigneeChineseFullAddress}");
+        }
+        if (record.getTotalGoodsDescription() != null) {
+            stringBuffer.append(" AND TOTAL_GOODS_DESCRIPTION = #{totalGoodsDescription}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

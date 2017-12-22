@@ -23,6 +23,7 @@ public class WmLocationHistory extends BasePo {
     private String consignmentNo;
     private String actionCode;
     private String memo;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -109,6 +110,14 @@ public class WmLocationHistory extends BasePo {
         
     public void setMemo(String memo) {
         this.memo = memo;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

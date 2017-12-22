@@ -17,6 +17,7 @@ public class CdAttachmentRef extends BasePo {
     private Integer cdAttachmentId;
     private String relationNo;
     private String relationCode;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -55,6 +56,14 @@ public class CdAttachmentRef extends BasePo {
         
     public void setRelationCode(String relationCode) {
         this.relationCode = relationCode;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

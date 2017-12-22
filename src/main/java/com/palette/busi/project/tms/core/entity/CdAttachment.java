@@ -19,6 +19,7 @@ public class CdAttachment extends BasePo {
     private String fileContentType;
     private Integer fileSize;
     private String attachmentComment;
+    private String companyCode;
     private Integer recordVersion;
     private Date createDateTime;
     private String createUserCode;
@@ -73,6 +74,14 @@ public class CdAttachment extends BasePo {
         
     public void setAttachmentComment(String attachmentComment) {
         this.attachmentComment = attachmentComment;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

@@ -18,13 +18,13 @@ import com.palette.busi.project.tms.core.base.BaseMybatisMapper;
 public interface CdCompanyIntf extends BaseMybatisMapper {
 
 
-	@Select("SELECT  CD_COMPANY_ID  AS cdCompanyId, COMPANY_NAME  AS companyName, COMPANY_CODE  AS companyCode, IS_ACTIVE  AS isActive, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM cd_company WHERE cd_company_id=#{cdCompanyId}")
+	@Select("SELECT  CD_COMPANY_ID  AS cdCompanyId, COMPANY_NAME  AS companyName, COMPANY_CODE  AS companyCode, COMPANY_ADDRESS  AS companyAddress, COMPANY_CONTACT  AS companyContact, IS_ACTIVE  AS isActive, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM cd_company WHERE cd_company_id=#{cdCompanyId}")
 	public CdCompany selectCdCompanyById(@Param("cdCompanyId") int cdCompanyId);
 	
-	@Select("SELECT  CD_COMPANY_ID  AS cdCompanyId, COMPANY_NAME  AS companyName, COMPANY_CODE  AS companyCode, IS_ACTIVE  AS isActive, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM cd_company")
+	@Select("SELECT  CD_COMPANY_ID  AS cdCompanyId, COMPANY_NAME  AS companyName, COMPANY_CODE  AS companyCode, COMPANY_ADDRESS  AS companyAddress, COMPANY_CONTACT  AS companyContact, IS_ACTIVE  AS isActive, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime FROM cd_company")
 	public List<CdCompany> selectAllCdCompany();
 	
-	@Insert("insert into cd_company ( CD_COMPANY_ID, COMPANY_NAME, COMPANY_CODE, IS_ACTIVE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, UPDATE_USER_CODE, UPDATE_DATE_TIME ) values (#{cdCompanyId},#{companyName},#{companyCode},#{isActive},#{recordVersion},#{createUserCode},#{createDateTime},#{updateUserCode},#{updateDateTime})")
+	@Insert("insert into cd_company ( CD_COMPANY_ID, COMPANY_NAME, COMPANY_CODE, COMPANY_ADDRESS, COMPANY_CONTACT, IS_ACTIVE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, UPDATE_USER_CODE, UPDATE_DATE_TIME ) values (#{cdCompanyId},#{companyName},#{companyCode},#{companyAddress},#{companyContact},#{isActive},#{recordVersion},#{createUserCode},#{createDateTime},#{updateUserCode},#{updateDateTime})")
 	public int insertCdCompany(CdCompany cdCompany);
 
 	@UpdateProvider(type=CdCompanySqlProvider.class, method="update")

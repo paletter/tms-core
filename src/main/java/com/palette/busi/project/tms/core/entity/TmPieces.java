@@ -40,6 +40,14 @@ public class TmPieces extends BasePo {
     private String deliveryCode;
     private String deliveryNo;
     private String companyCode;
+    private String consigneeName;
+    private String consigneeStateCode;
+    private String consigneeCityCode;
+    private String consigneeStreet;
+    private String consigneePostCode;
+    private String consigneeMobileNo;
+    private String consigneeChineseFullAddress;
+    private String totalGoodsDescription;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -260,6 +268,70 @@ public class TmPieces extends BasePo {
         
     public void setCompanyCode(String companyCode) {
         this.companyCode = companyCode;
+    }
+        
+    public String getConsigneeName() {
+        return consigneeName;
+    }
+        
+    public void setConsigneeName(String consigneeName) {
+        this.consigneeName = consigneeName;
+    }
+        
+    public String getConsigneeStateCode() {
+        return consigneeStateCode;
+    }
+        
+    public void setConsigneeStateCode(String consigneeStateCode) {
+        this.consigneeStateCode = consigneeStateCode;
+    }
+        
+    public String getConsigneeCityCode() {
+        return consigneeCityCode;
+    }
+        
+    public void setConsigneeCityCode(String consigneeCityCode) {
+        this.consigneeCityCode = consigneeCityCode;
+    }
+        
+    public String getConsigneeStreet() {
+        return consigneeStreet;
+    }
+        
+    public void setConsigneeStreet(String consigneeStreet) {
+        this.consigneeStreet = consigneeStreet;
+    }
+        
+    public String getConsigneePostCode() {
+        return consigneePostCode;
+    }
+        
+    public void setConsigneePostCode(String consigneePostCode) {
+        this.consigneePostCode = consigneePostCode;
+    }
+        
+    public String getConsigneeMobileNo() {
+        return consigneeMobileNo;
+    }
+        
+    public void setConsigneeMobileNo(String consigneeMobileNo) {
+        this.consigneeMobileNo = consigneeMobileNo;
+    }
+        
+    public String getConsigneeChineseFullAddress() {
+        return consigneeChineseFullAddress;
+    }
+        
+    public void setConsigneeChineseFullAddress(String consigneeChineseFullAddress) {
+        this.consigneeChineseFullAddress = consigneeChineseFullAddress;
+    }
+        
+    public String getTotalGoodsDescription() {
+        return totalGoodsDescription;
+    }
+        
+    public void setTotalGoodsDescription(String totalGoodsDescription) {
+        this.totalGoodsDescription = totalGoodsDescription;
     }
         
     public Integer getRecordVersion() {

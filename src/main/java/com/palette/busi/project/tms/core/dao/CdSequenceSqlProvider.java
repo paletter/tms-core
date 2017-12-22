@@ -22,28 +22,28 @@ public class CdSequenceSqlProvider extends BaseSqlProvider {
 		BEGIN();
         UPDATE("cd_sequence");
         if (record.getCdSequenceId() != null) {
-            SET("cd_sequence_id = #{cdSequenceId}");
+            SET("CD_SEQUENCE_ID = #{cdSequenceId}");
         }
         if (record.getFixedLength() != null) {
-            SET("fixed_length = #{fixedLength}");
+            SET("FIXED_LENGTH = #{fixedLength}");
         }
         if (record.getTypeCode() != null) {
-            SET("type_code = #{typeCode}");
+            SET("TYPE_CODE = #{typeCode}");
         }
         if (record.getPrefix() != null) {
-            SET("prefix = #{prefix}");
+            SET("PREFIX = #{prefix}");
         }
         if (record.getSuffix() != null) {
-            SET("suffix = #{suffix}");
+            SET("SUFFIX = #{suffix}");
         }
         if (record.getIncrementBy() != null) {
-            SET("increment_by = #{incrementBy}");
+            SET("INCREMENT_BY = #{incrementBy}");
         }
         if (record.getDateFormat() != null) {
             SET("DATE_FORMAT = #{dateFormat}");
         }
         if (record.getCurval() != null) {
-            SET("curval = #{curval}");
+            SET("CURVAL = #{curval}");
         }
         if (record.getCompanyCode() != null) {
             SET("COMPANY_CODE = #{companyCode}");
@@ -82,28 +82,28 @@ public class CdSequenceSqlProvider extends BaseSqlProvider {
         StringBuffer stringBuffer = new StringBuffer();
         stringBuffer.append(" 1=1 ");
         if (record.getCdSequenceId() != null) {
-            stringBuffer.append(" AND cd_sequence_id = #{cdSequenceId}");
+            stringBuffer.append(" AND CD_SEQUENCE_ID = #{cdSequenceId}");
         }
         if (record.getFixedLength() != null) {
-            stringBuffer.append(" AND fixed_length = #{fixedLength}");
+            stringBuffer.append(" AND FIXED_LENGTH = #{fixedLength}");
         }
         if (record.getTypeCode() != null) {
-            stringBuffer.append(" AND type_code = #{typeCode}");
+            stringBuffer.append(" AND TYPE_CODE = #{typeCode}");
         }
         if (record.getPrefix() != null) {
-            stringBuffer.append(" AND prefix = #{prefix}");
+            stringBuffer.append(" AND PREFIX = #{prefix}");
         }
         if (record.getSuffix() != null) {
-            stringBuffer.append(" AND suffix = #{suffix}");
+            stringBuffer.append(" AND SUFFIX = #{suffix}");
         }
         if (record.getIncrementBy() != null) {
-            stringBuffer.append(" AND increment_by = #{incrementBy}");
+            stringBuffer.append(" AND INCREMENT_BY = #{incrementBy}");
         }
         if (record.getDateFormat() != null) {
             stringBuffer.append(" AND DATE_FORMAT = #{dateFormat}");
         }
         if (record.getCurval() != null) {
-            stringBuffer.append(" AND curval = #{curval}");
+            stringBuffer.append(" AND CURVAL = #{curval}");
         }
         if (record.getCompanyCode() != null) {
             stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");

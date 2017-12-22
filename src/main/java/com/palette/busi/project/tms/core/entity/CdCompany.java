@@ -16,6 +16,8 @@ public class CdCompany extends BasePo {
     private Integer cdCompanyId;
     private String companyName;
     private String companyCode;
+    private String companyAddress;
+    private String companyContact;
     private Integer isActive;
     private Integer recordVersion;
     private String createUserCode;
@@ -45,6 +47,22 @@ public class CdCompany extends BasePo {
         
     public void setCompanyCode(String companyCode) {
         this.companyCode = companyCode;
+    }
+        
+    public String getCompanyAddress() {
+        return companyAddress;
+    }
+        
+    public void setCompanyAddress(String companyAddress) {
+        this.companyAddress = companyAddress;
+    }
+        
+    public String getCompanyContact() {
+        return companyContact;
+    }
+        
+    public void setCompanyContact(String companyContact) {
+        this.companyContact = companyContact;
     }
         
     public Integer getIsActive() {

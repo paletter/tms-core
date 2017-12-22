@@ -20,6 +20,7 @@ public class TmPiecesRef extends BasePo {
     private Integer refId;
     private String refCode;
     private String summary;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -82,6 +83,14 @@ public class TmPiecesRef extends BasePo {
         
     public void setSummary(String summary) {
         this.summary = summary;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

@@ -18,13 +18,13 @@ import com.palette.busi.project.tms.core.base.BaseMybatisMapper;
 public interface CdUserWarehouseIntf extends BaseMybatisMapper {
 
 
-	@Select("SELECT  CD_USER_WAREHOUSE_ID  AS cdUserWarehouseId, CD_USER_ID  AS cdUserId, CD_WAREHOUSE_ID  AS cdWarehouseId, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_user_warehouse WHERE cd_user_warehouse_id=#{cdUserWarehouseId}")
+	@Select("SELECT  CD_USER_WAREHOUSE_ID  AS cdUserWarehouseId, CD_USER_ID  AS cdUserId, CD_WAREHOUSE_ID  AS cdWarehouseId, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_user_warehouse WHERE cd_user_warehouse_id=#{cdUserWarehouseId}")
 	public CdUserWarehouse selectCdUserWarehouseById(@Param("cdUserWarehouseId") int cdUserWarehouseId);
 	
-	@Select("SELECT  CD_USER_WAREHOUSE_ID  AS cdUserWarehouseId, CD_USER_ID  AS cdUserId, CD_WAREHOUSE_ID  AS cdWarehouseId, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_user_warehouse")
+	@Select("SELECT  CD_USER_WAREHOUSE_ID  AS cdUserWarehouseId, CD_USER_ID  AS cdUserId, CD_WAREHOUSE_ID  AS cdWarehouseId, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_user_warehouse")
 	public List<CdUserWarehouse> selectAllCdUserWarehouse();
 	
-	@Insert("insert into cd_user_warehouse ( CD_USER_WAREHOUSE_ID, CD_USER_ID, CD_WAREHOUSE_ID, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, CREATE_TIME_ZONE, UPDATE_USER_CODE, UPDATE_DATE_TIME, UPDATE_TIME_ZONE ) values (#{cdUserWarehouseId},#{cdUserId},#{cdWarehouseId},#{recordVersion},#{createUserCode},#{createDateTime},#{createTimeZone},#{updateUserCode},#{updateDateTime},#{updateTimeZone})")
+	@Insert("insert into cd_user_warehouse ( CD_USER_WAREHOUSE_ID, CD_USER_ID, CD_WAREHOUSE_ID, COMPANY_CODE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, CREATE_TIME_ZONE, UPDATE_USER_CODE, UPDATE_DATE_TIME, UPDATE_TIME_ZONE ) values (#{cdUserWarehouseId},#{cdUserId},#{cdWarehouseId},#{companyCode},#{recordVersion},#{createUserCode},#{createDateTime},#{createTimeZone},#{updateUserCode},#{updateDateTime},#{updateTimeZone})")
 	public int insertCdUserWarehouse(CdUserWarehouse cdUserWarehouse);
 
 	@UpdateProvider(type=CdUserWarehouseSqlProvider.class, method="update")

@@ -21,6 +21,7 @@ public class CdUserPwd extends BasePo {
     private Date lastLoginTime;
     private String lastLoginIp;
     private String cookie;
+    private String companyCode;
     private Integer recordVersion;
     private String createUserCode;
     private Date createDateTime;
@@ -91,6 +92,14 @@ public class CdUserPwd extends BasePo {
         
     public void setCookie(String cookie) {
         this.cookie = cookie;
+    }
+        
+    public String getCompanyCode() {
+        return companyCode;
+    }
+        
+    public void setCompanyCode(String companyCode) {
+        this.companyCode = companyCode;
     }
         
     public Integer getRecordVersion() {

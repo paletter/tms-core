@@ -36,6 +36,9 @@ public class WmDeliveryOrderItemSqlProvider extends BaseSqlProvider {
         if (record.getStatus() != null) {
             SET("STATUS = #{status}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -77,6 +80,9 @@ public class WmDeliveryOrderItemSqlProvider extends BaseSqlProvider {
         }
         if (record.getStatus() != null) {
             stringBuffer.append(" AND STATUS = #{status}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

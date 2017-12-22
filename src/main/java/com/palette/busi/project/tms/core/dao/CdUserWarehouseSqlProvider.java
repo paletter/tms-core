@@ -30,6 +30,9 @@ public class CdUserWarehouseSqlProvider extends BaseSqlProvider {
         if (record.getCdWarehouseId() != null) {
             SET("CD_WAREHOUSE_ID = #{cdWarehouseId}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -71,6 +74,9 @@ public class CdUserWarehouseSqlProvider extends BaseSqlProvider {
         }
         if (record.getCdWarehouseId() != null) {
             stringBuffer.append(" AND CD_WAREHOUSE_ID = #{cdWarehouseId}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

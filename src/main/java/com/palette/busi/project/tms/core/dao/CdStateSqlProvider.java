@@ -42,6 +42,9 @@ public class CdStateSqlProvider extends BaseSqlProvider {
         if (record.getMemo() != null) {
             SET("MEMO = #{memo}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -95,6 +98,9 @@ public class CdStateSqlProvider extends BaseSqlProvider {
         }
         if (record.getMemo() != null) {
             stringBuffer.append(" AND MEMO = #{memo}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

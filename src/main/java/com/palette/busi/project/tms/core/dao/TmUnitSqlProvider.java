@@ -54,6 +54,9 @@ public class TmUnitSqlProvider extends BaseSqlProvider {
         if (record.getTmSectorId() != null) {
             SET("TM_SECTOR_ID = #{tmSectorId}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -113,6 +116,9 @@ public class TmUnitSqlProvider extends BaseSqlProvider {
         }
         if (record.getTmSectorId() != null) {
             stringBuffer.append(" AND TM_SECTOR_ID = #{tmSectorId}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

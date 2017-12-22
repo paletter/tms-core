@@ -45,6 +45,9 @@ public class TmSectorHistorySqlProvider extends BaseSqlProvider {
         if (record.getActionUserName() != null) {
             SET("ACTION_USER_NAME = #{actionUserName}");
         }
+        if (record.getCompanyCode() != null) {
+            SET("COMPANY_CODE = #{companyCode}");
+        }
         if (record.getRecordVersion() != null) {
             SET("RECORD_VERSION = #{recordVersion}");
         }
@@ -95,6 +98,9 @@ public class TmSectorHistorySqlProvider extends BaseSqlProvider {
         }
         if (record.getActionUserName() != null) {
             stringBuffer.append(" AND ACTION_USER_NAME = #{actionUserName}");
+        }
+        if (record.getCompanyCode() != null) {
+            stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
         }
         if (record.getRecordVersion() != null) {
             stringBuffer.append(" AND RECORD_VERSION = #{recordVersion}");

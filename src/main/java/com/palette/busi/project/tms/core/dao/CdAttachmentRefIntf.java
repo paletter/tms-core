@@ -18,13 +18,13 @@ import com.palette.busi.project.tms.core.base.BaseMybatisMapper;
 public interface CdAttachmentRefIntf extends BaseMybatisMapper {
 
 
-	@Select("SELECT  CD_ATTACHMENT_REF_ID  AS cdAttachmentRefId, CD_ATTACHMENT_ID  AS cdAttachmentId, RELATION_NO  AS relationNo, RELATION_CODE  AS relationCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_attachment_ref WHERE cd_attachment_ref_id=#{cdAttachmentRefId}")
+	@Select("SELECT  CD_ATTACHMENT_REF_ID  AS cdAttachmentRefId, CD_ATTACHMENT_ID  AS cdAttachmentId, RELATION_NO  AS relationNo, RELATION_CODE  AS relationCode, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_attachment_ref WHERE cd_attachment_ref_id=#{cdAttachmentRefId}")
 	public CdAttachmentRef selectCdAttachmentRefById(@Param("cdAttachmentRefId") int cdAttachmentRefId);
 	
-	@Select("SELECT  CD_ATTACHMENT_REF_ID  AS cdAttachmentRefId, CD_ATTACHMENT_ID  AS cdAttachmentId, RELATION_NO  AS relationNo, RELATION_CODE  AS relationCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_attachment_ref")
+	@Select("SELECT  CD_ATTACHMENT_REF_ID  AS cdAttachmentRefId, CD_ATTACHMENT_ID  AS cdAttachmentId, RELATION_NO  AS relationNo, RELATION_CODE  AS relationCode, COMPANY_CODE  AS companyCode, RECORD_VERSION  AS recordVersion, CREATE_USER_CODE  AS createUserCode, CREATE_DATE_TIME  AS createDateTime, CREATE_TIME_ZONE  AS createTimeZone, UPDATE_USER_CODE  AS updateUserCode, UPDATE_DATE_TIME  AS updateDateTime, UPDATE_TIME_ZONE  AS updateTimeZone FROM cd_attachment_ref")
 	public List<CdAttachmentRef> selectAllCdAttachmentRef();
 	
-	@Insert("insert into cd_attachment_ref ( CD_ATTACHMENT_REF_ID, CD_ATTACHMENT_ID, RELATION_NO, RELATION_CODE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, CREATE_TIME_ZONE, UPDATE_USER_CODE, UPDATE_DATE_TIME, UPDATE_TIME_ZONE ) values (#{cdAttachmentRefId},#{cdAttachmentId},#{relationNo},#{relationCode},#{recordVersion},#{createUserCode},#{createDateTime},#{createTimeZone},#{updateUserCode},#{updateDateTime},#{updateTimeZone})")
+	@Insert("insert into cd_attachment_ref ( CD_ATTACHMENT_REF_ID, CD_ATTACHMENT_ID, RELATION_NO, RELATION_CODE, COMPANY_CODE, RECORD_VERSION, CREATE_USER_CODE, CREATE_DATE_TIME, CREATE_TIME_ZONE, UPDATE_USER_CODE, UPDATE_DATE_TIME, UPDATE_TIME_ZONE ) values (#{cdAttachmentRefId},#{cdAttachmentId},#{relationNo},#{relationCode},#{companyCode},#{recordVersion},#{createUserCode},#{createDateTime},#{createTimeZone},#{updateUserCode},#{updateDateTime},#{updateTimeZone})")
 	public int insertCdAttachmentRef(CdAttachmentRef cdAttachmentRef);
 
 	@UpdateProvider(type=CdAttachmentRefSqlProvider.class, method="update")

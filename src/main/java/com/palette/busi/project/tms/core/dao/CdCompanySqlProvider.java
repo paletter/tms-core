@@ -30,6 +30,12 @@ public class CdCompanySqlProvider extends BaseSqlProvider {
         if (record.getCompanyCode() != null) {
             SET("COMPANY_CODE = #{companyCode}");
         }
+        if (record.getCompanyAddress() != null) {
+            SET("COMPANY_ADDRESS = #{companyAddress}");
+        }
+        if (record.getCompanyContact() != null) {
+            SET("COMPANY_CONTACT = #{companyContact}");
+        }
         if (record.getIsActive() != null) {
             SET("IS_ACTIVE = #{isActive}");
         }
@@ -68,6 +74,12 @@ public class CdCompanySqlProvider extends BaseSqlProvider {
         }
         if (record.getCompanyCode() != null) {
             stringBuffer.append(" AND COMPANY_CODE = #{companyCode}");
+        }
+        if (record.getCompanyAddress() != null) {
+            stringBuffer.append(" AND COMPANY_ADDRESS = #{companyAddress}");
+        }
+        if (record.getCompanyContact() != null) {
+            stringBuffer.append(" AND COMPANY_CONTACT = #{companyContact}");
         }
         if (record.getIsActive() != null) {
             stringBuffer.append(" AND IS_ACTIVE = #{isActive}");
